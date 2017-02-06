@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Site Released"
-date: 2017-02-03
+date: 2017-02-03 -0800
 ---
 
 Today my site is finally released. I\'ve been considering writing my own blog starting from last semester. However, the effort failed at that time due to heavy loads of job hunting and semester long projects. Now that everything is settled, it is possible to launch this site.
