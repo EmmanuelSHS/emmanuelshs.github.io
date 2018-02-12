@@ -3,6 +3,10 @@ layout: default
 title: Mengqi Wang
 ---
 <div class="blurb">
-    <h1>News</h1>
-    <p>Homepage Init</p>
+    <h2>Posts</h2>
+    <ul class="post">
+        {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
