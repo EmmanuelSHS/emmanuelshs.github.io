@@ -11,7 +11,6 @@ layout: null
     <id>{{ site.url }}/blog</id>
     <author>
         <name>{{ site.name }}</name>
-        <email>clochard93@gmail.com</email>
     </author>
 
     {% for post in site.posts %}
