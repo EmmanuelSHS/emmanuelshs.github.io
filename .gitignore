@@ -7,3 +7,13 @@ _site/
 .jekyll-metadata
 
 # End of https://www.gitignore.io/api/jekyll
+_theme_packages/*
+
+Thumbs.db
+.DS_Store
+
+!.gitkeep
+
+.rbenv-version
+.rvmrc
+/vendor

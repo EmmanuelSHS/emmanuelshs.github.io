@@ -1,12 +1,3 @@
 ---
-layout: default
-title: Mengqi Wang
+layout: index
 ---
-<div class="blurb">
-    <h2>Posts</h2>
-    <ul class="post">
-        {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
