@@ -31,6 +31,8 @@ for-else实在是很少见的一种语法，开发中如果容易出现歧义，
 
 > * If you don’t expect the lengths of the lists passed to zip to be equal, consider using the zip_longest function from the itertools built-in module instead:
 
+zip_longest可以来处理不相等的多个迭代器
+
 > * zip consumes the iterators it wraps one item at a time, which means it can be used with infinitely long inputs without risk of a program using too much memory and crashing.
 
 > * All of the same options from the new format built-in mini language are available after the colon in the placeholders within an f-string, as is the ability to coerce values to Unicode and repr strings similar to the str.format method:
@@ -43,6 +45,8 @@ for-else实在是很少见的一种语法，开发中如果容易出现歧义，
 
 > * The second problem with C-style formatting expressions is that they become difficult to read when you need to make small modifications to values
 
+推荐使用f-string进行字符串格式化，可以有效避免低级重复，顺序依赖，意义不明的操作符等。避免其他格式化中的一些问题
+
 > * Importantly, str instances do not have an associated binary encoding, and bytes instances do not have an associated text encoding. To convert Unicode data to binary data, you must call the encode method of str.
 
 > * Always use absolute names for modules when importing them, not names relative to the current module’s own path. For example, to import the foo module from within the bar package, you should use from bar import foo, not just import foo.
@@ -51,11 +55,15 @@ for-else实在是很少见的一种语法，开发中如果容易出现歧义，
 
 > * If you’re creating a dictionary to manage an arbitrary set of potential keys, then you should prefer using a defaultdict
 
-If you prefer error early (a lot of the time you would), consider built-in dict. Otherwise consider clearly stating function returns an `error-or-object` result.
+未必为真，有时你更希望提前报错而非带着异常跑完整个code
 
 > * If you need to handle a high rate of key insertions and popitem calls (e.g., to implement a least-recently-used cache), OrderedDict may be a better fit than the standard Python dict type
 
+OrderedDict对于插入删除键的支持友好
+
 > * Starting with Python 3.6, and officially part of the Python specification in version 3.7, dictionaries will preserve insertion order
+
+dict取决于版本，可以保留插入顺序
 
 > * The sort method doesn’t work for objects unless they define a natural ordering using special methods, which is uncommon.
 
@@ -70,6 +78,8 @@ If you prefer error early (a lot of the time you would), consider built-in dict.
 > * However, to unpack assignments that contain a starred expression, you must have at least one required part, or else you’ll get a SyntaxError
 
 > * Python also supports catch-all unpacking through a starred expression.
+
+unpack 不定长度的容器有风险，须谨慎
 
 > * But it will break when Unicode data is encoded as a UTF-8 byte string:
 
